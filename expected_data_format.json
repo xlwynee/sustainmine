@@ -1,0 +1,24 @@
+{
+  "sentinel_2": {
+    "file_format": "GeoTIFF (.tif)",
+    "bands": {
+      "B2": "Blue (490 nm)",
+      "B3": "Green (560 nm)",
+      "B4": "Red (665 nm)",
+      "B8": "NIR (842 nm)",
+      "B11": "SWIR (1610 nm)"
+    },
+    "resolution": "10m for RGB+NIR, 20m for SWIR",
+    "expected_files_per_date": 5
+  },
+  "sentinel_5p": {
+    "file_format": "GeoTIFF or NetCDF (.nc)",
+    "products": {
+      "NO2": "Nitrogen Dioxide column density",
+      "SO2": "Sulfur Dioxide column density",
+      "CO": "Carbon Monoxide column density"
+    },
+    "resolution": "7km \u00d7 3.5km",
+    "expected_files_per_date": 3
+  }
+}

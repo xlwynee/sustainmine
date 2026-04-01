@@ -1,0 +1,42 @@
+
+Google Drive Folder Structure:
+================================
+
+Sentinel_2/  (Folder ID: 15yN_kbDv615DukoMgJXPAVWreA5F-RwT)
+├── July/    (Folder ID: 1fGLCqc1iLeZb6xKMzQerfdU5CA2SDjop)
+├── Aug/     (Folder ID: 1tzAbAeTWFKt3C3uNW2qPW7acx7eNA03f)
+├── Sep/     (Folder ID: 1nTNjAUV0b6NvrBVrEojCQXR99Vx0f5lv)
+├── Oct/     (Folder ID: 1xp5JBGHwSc-8YXErLAmZnYyrhdv22aDR)
+├── Nov/     (Folder ID: 1dmgore3F0IN3LHOUWcJyozGthqxPGPHO)
+└── Dec/     (Folder ID: 1xJrz4cDhqz0ohveIAf3pgLgr-gwJkTL4)
+
+Sentinel_5/  (Folder ID: 1-X9de6Fkqw-2NNo3sSc2ObqTQ-yVzt8D)
+├── NO2/     (Folder ID: 1iOT1Xi1jyRjyNmcbR78Bd_7Nsj5kHkop)
+├── SO2/     (Folder ID: 1h0Y9Avt2ZPAmJwSSecJwXwWb-hNc75HF)
+└── CO/      (Folder ID: 1nQK6poG45NewsL-6tpTGrHtudyiyD7UM)
+
+
+
+INSTRUCTIONS FOR DOWNLOADING SATELLITE DATA
+============================================
+
+Since the Google Drive integration currently doesn't support downloading 
+non-Google Docs files (like TIF/GeoTIFF images), you have two options:
+
+OPTION 1: Download Manually
+----------------------------
+1. Visit the Google Drive folders using the URLs below
+2. Download all image files to your local machine
+3. Upload them to this environment
+
+Sentinel-2 URL: https://drive.google.com/drive/folders/15yN_kbDv615DukoMgJXPAVWreA5F-RwT
+Sentinel-5P URL: https://drive.google.com/drive/folders/1-X9de6Fkqw-2NNo3sSc2ObqTQ-yVzt8D
+
+OPTION 2: Use Google Drive API with Service Account (Recommended)
+------------------------------------------------------------------
+This requires setting up Google Drive API credentials.
+
+OPTION 3: Use gdown or similar tools
+-------------------------------------
+Install: pip install gdown
+Then use folder IDs to download entire folders.

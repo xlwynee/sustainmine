@@ -1,0 +1,61 @@
+{
+  "paths": {
+    "sensor_data": "sensor_data_cleaned.csv",
+    "sentinel_2": "data/sentinel_2",
+    "sentinel_5": "data/sentinel_5",
+    "output_dir": "outputs",
+    "checkpoints": "checkpoints",
+    "reports": "reports"
+  },
+  "sentinel_2": {
+    "bands": [
+      "B2",
+      "B3",
+      "B4",
+      "B8",
+      "B11",
+      "B12"
+    ],
+    "target_size": [
+      224,
+      224
+    ],
+    "file_pattern": "S2_*.tif"
+  },
+  "sentinel_5": {
+    "gases": [
+      "NO2",
+      "SO2",
+      "CO"
+    ],
+    "months": [
+      "July",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+    "file_pattern": "S5P_*_[Daily_]*.(tif|nc)",
+    "representation": "numerical"
+  },
+  "model": {
+    "img_size": 224,
+    "patch_size": 16,
+    "in_channels": 6,
+    "s5_dim": 3,
+    "sensor_dim": 9,
+    "embed_dim": 384,
+    "depth": 6,
+    "num_heads": 6,
+    "num_classes": 3,
+    "num_forecast_steps": 3,
+    "num_pollutants": 6
+  },
+  "training": {
+    "batch_size": 8,
+    "learning_rate": 0.0001,
+    "num_epochs": 20,
+    "device": "cuda"
+  }
+}
