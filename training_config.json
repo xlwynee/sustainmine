@@ -1,0 +1,53 @@
+{
+  "config": {
+    "sensor_data_path": "sensor_data_cleaned_with_binary_labels.csv",
+    "sentinel2_path": "data/sentinel_2",
+    "sentinel5_path": "data/sentinel_5",
+    "img_size": 224,
+    "forecast_horizon": 3,
+    "label_column": "binary_label",
+    "batch_size": 8,
+    "num_epochs": 20,
+    "train_split": 0.8,
+    "learning_rate": 0.0001,
+    "alpha": 0.5,
+    "beta": 0.5,
+    "weight_decay": 0.01,
+    "model": {
+      "img_size": 224,
+      "patch_size": 16,
+      "in_channels": 6,
+      "s5_dim": 3,
+      "sensor_dim": 8,
+      "embed_dim": 384,
+      "depth": 6,
+      "num_heads": 6,
+      "num_classes": 2,
+      "num_forecast_steps": 3,
+      "num_pollutants": 6,
+      "dropout": 0.1
+    }
+  },
+  "dataset_summary": {
+    "s2_dates": 60,
+    "no2_dates": 157,
+    "so2_dates": 158,
+    "co_dates": 158,
+    "sensor_dates": 158,
+    "valid_samples": 58,
+    "label_counts": {
+      "0": 8,
+      "1": 50
+    }
+  },
+  "class_weights": [
+    3.2857143878936768,
+    0.5897436141967773
+  ],
+  "final_metrics": {
+    "best_val_loss": 222.6264419555664,
+    "best_val_accuracy": 0.9166666666666666,
+    "best_val_f1": 0.9565217391304348,
+    "best_val_mae": 10.78927993774414
+  }
+}
