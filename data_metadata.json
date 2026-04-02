@@ -1,0 +1,46 @@
+{
+  "data_location": "C:\\Users\\leena\\sustainmine\\data",
+  "structure": {
+    "sentinel_2": {
+      "path": "C:\\Users\\leena\\sustainmine\\data\\sentinel_2",
+      "bands": [
+        "B2",
+        "B3",
+        "B4",
+        "B8",
+        "B11",
+        "B12"
+      ],
+      "months": [
+        "July",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ],
+      "format": "GeoTIFF (.tif)",
+      "filename_pattern": "S2_YYYY-MM-DD.tif",
+      "expected_shape": "(6, H, W)"
+    },
+    "sentinel_5": {
+      "path": "C:\\Users\\leena\\sustainmine\\data\\sentinel_5",
+      "products": [
+        "NO2",
+        "SO2",
+        "CO"
+      ],
+      "months": [
+        "July",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ],
+      "format": "GeoTIFF (.tif) or NetCDF (.nc)",
+      "filename_pattern": "S5P_<GAS>_[Daily_]YYYY-MM-DD.(tif|nc)",
+      "usage": "numerical features per gas"
+    }
+  }
+}
